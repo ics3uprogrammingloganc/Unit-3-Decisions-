@@ -29,15 +29,16 @@
         private void InitializeComponent()
         {
             this.grbUser = new System.Windows.Forms.GroupBox();
-            this.grbComputer = new System.Windows.Forms.GroupBox();
-            this.radUserRock = new System.Windows.Forms.RadioButton();
-            this.radUserPaper = new System.Windows.Forms.RadioButton();
             this.radUserScissors = new System.Windows.Forms.RadioButton();
+            this.radUserPaper = new System.Windows.Forms.RadioButton();
+            this.radUserRock = new System.Windows.Forms.RadioButton();
+            this.grbComputer = new System.Windows.Forms.GroupBox();
             this.radCompScissors = new System.Windows.Forms.RadioButton();
             this.radCompPaper = new System.Windows.Forms.RadioButton();
             this.radCompRock = new System.Windows.Forms.RadioButton();
             this.btnPlay = new System.Windows.Forms.Button();
             this.lblWinner = new System.Windows.Forms.Label();
+            this.lblResult = new System.Windows.Forms.Label();
             this.grbUser.SuspendLayout();
             this.grbComputer.SuspendLayout();
             this.SuspendLayout();
@@ -55,30 +56,17 @@
             this.grbUser.Text = "Your choice";
             this.grbUser.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // grbComputer
+            // radUserScissors
             // 
-            this.grbComputer.Controls.Add(this.radCompScissors);
-            this.grbComputer.Controls.Add(this.radCompPaper);
-            this.grbComputer.Controls.Add(this.radCompRock);
-            this.grbComputer.Location = new System.Drawing.Point(26, 147);
-            this.grbComputer.Name = "grbComputer";
-            this.grbComputer.Size = new System.Drawing.Size(315, 99);
-            this.grbComputer.TabIndex = 1;
-            this.grbComputer.TabStop = false;
-            this.grbComputer.Text = "Computer\'s choice";
-            this.grbComputer.Enter += new System.EventHandler(this.grbComputer_Enter);
-            // 
-            // radUserRock
-            // 
-            this.radUserRock.AutoSize = true;
-            this.radUserRock.Location = new System.Drawing.Point(20, 19);
-            this.radUserRock.Name = "radUserRock";
-            this.radUserRock.Size = new System.Drawing.Size(51, 17);
-            this.radUserRock.TabIndex = 0;
-            this.radUserRock.TabStop = true;
-            this.radUserRock.Text = "Rock";
-            this.radUserRock.UseVisualStyleBackColor = true;
-            this.radUserRock.CheckedChanged += new System.EventHandler(this.radUserRock_CheckedChanged);
+            this.radUserScissors.AutoSize = true;
+            this.radUserScissors.Location = new System.Drawing.Point(20, 67);
+            this.radUserScissors.Name = "radUserScissors";
+            this.radUserScissors.Size = new System.Drawing.Size(64, 17);
+            this.radUserScissors.TabIndex = 2;
+            this.radUserScissors.TabStop = true;
+            this.radUserScissors.Text = "Scissors";
+            this.radUserScissors.UseVisualStyleBackColor = true;
+            this.radUserScissors.CheckedChanged += new System.EventHandler(this.radUserScissors_CheckedChanged);
             // 
             // radUserPaper
             // 
@@ -92,17 +80,30 @@
             this.radUserPaper.UseVisualStyleBackColor = true;
             this.radUserPaper.CheckedChanged += new System.EventHandler(this.radUserPaper_CheckedChanged);
             // 
-            // radUserScissors
+            // radUserRock
             // 
-            this.radUserScissors.AutoSize = true;
-            this.radUserScissors.Location = new System.Drawing.Point(20, 67);
-            this.radUserScissors.Name = "radUserScissors";
-            this.radUserScissors.Size = new System.Drawing.Size(64, 17);
-            this.radUserScissors.TabIndex = 2;
-            this.radUserScissors.TabStop = true;
-            this.radUserScissors.Text = "Scissors";
-            this.radUserScissors.UseVisualStyleBackColor = true;
-            this.radUserScissors.CheckedChanged += new System.EventHandler(this.radUserScissors_CheckedChanged);
+            this.radUserRock.AutoSize = true;
+            this.radUserRock.Location = new System.Drawing.Point(20, 19);
+            this.radUserRock.Name = "radUserRock";
+            this.radUserRock.Size = new System.Drawing.Size(51, 17);
+            this.radUserRock.TabIndex = 0;
+            this.radUserRock.TabStop = true;
+            this.radUserRock.Text = "Rock";
+            this.radUserRock.UseVisualStyleBackColor = true;
+            this.radUserRock.CheckedChanged += new System.EventHandler(this.radUserRock_CheckedChanged);
+            // 
+            // grbComputer
+            // 
+            this.grbComputer.Controls.Add(this.radCompScissors);
+            this.grbComputer.Controls.Add(this.radCompPaper);
+            this.grbComputer.Controls.Add(this.radCompRock);
+            this.grbComputer.Location = new System.Drawing.Point(26, 147);
+            this.grbComputer.Name = "grbComputer";
+            this.grbComputer.Size = new System.Drawing.Size(315, 99);
+            this.grbComputer.TabIndex = 1;
+            this.grbComputer.TabStop = false;
+            this.grbComputer.Text = "Computer\'s choice";
+            this.grbComputer.Enter += new System.EventHandler(this.grbComputer_Enter);
             // 
             // radCompScissors
             // 
@@ -150,17 +151,27 @@
             // lblWinner
             // 
             this.lblWinner.AutoSize = true;
-            this.lblWinner.Location = new System.Drawing.Point(139, 273);
+            this.lblWinner.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWinner.Location = new System.Drawing.Point(203, 260);
             this.lblWinner.Name = "lblWinner";
-            this.lblWinner.Size = new System.Drawing.Size(47, 13);
+            this.lblWinner.Size = new System.Drawing.Size(0, 31);
             this.lblWinner.TabIndex = 3;
-            this.lblWinner.Text = "Winner: ";
+            // 
+            // lblResult
+            // 
+            this.lblResult.AutoSize = true;
+            this.lblResult.Location = new System.Drawing.Point(137, 272);
+            this.lblResult.Name = "lblResult";
+            this.lblResult.Size = new System.Drawing.Size(47, 13);
+            this.lblResult.TabIndex = 4;
+            this.lblResult.Text = "Winner: ";
             // 
             // frmRPS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(373, 550);
+            this.ClientSize = new System.Drawing.Size(365, 310);
+            this.Controls.Add(this.lblResult);
             this.Controls.Add(this.lblWinner);
             this.Controls.Add(this.btnPlay);
             this.Controls.Add(this.grbComputer);
@@ -188,6 +199,7 @@
         private System.Windows.Forms.RadioButton radCompRock;
         private System.Windows.Forms.Button btnPlay;
         private System.Windows.Forms.Label lblWinner;
+        private System.Windows.Forms.Label lblResult;
     }
 }
 

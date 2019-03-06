@@ -57,8 +57,26 @@ namespace RockPaperScissorsLoganC
             if (userChoice == compChoice)
             {
                 // Tie
-                lblWinner.Text += " Tie.";
-            } else if (user)
+                lblWinner.Text = " Tie.";
+            }
+            // User wins
+            else if (userChoice == Choice.ROCK && compChoice == Choice.SCISSORS)
+            {
+                lblWinner.Text = "You win!";
+            }
+            else if (userChoice == Choice.SCISSORS && compChoice == Choice.PAPER)
+            {
+                lblWinner.Text = "You win!";
+            }
+            else if (userChoice == Choice.PAPER && compChoice == Choice.ROCK)
+            {
+                lblWinner.Text = "You win!";
+            }
+            //Computer wins
+            else
+            {
+                lblWinner.Text = " You lose.";
+            }
 
         }
 
