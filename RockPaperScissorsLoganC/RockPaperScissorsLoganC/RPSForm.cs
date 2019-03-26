@@ -1,4 +1,13 @@
-﻿using System;
+﻿/*
+ * Created by: Logan Cantin
+ * Created on: March 25th
+ * Created for: ICS3U Programming
+ * Daily Assignment – Day #18 - Rock, Paper, Scissors
+ * This program is the game rock paper scissors. The computer's choice is chosen randomly and the user
+ * can enter their own answer. The winner is display.
+*/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,16 +32,6 @@ namespace RockPaperScissorsLoganC
         {
             InitializeComponent();
             randomNumberGenerator = new Random();
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void grbComputer_Enter(object sender, EventArgs e)
-        {
-
         }
 
         private void btnPlay_Click(object sender, EventArgs e)
@@ -75,7 +74,7 @@ namespace RockPaperScissorsLoganC
             //Computer wins
             else
             {
-                lblWinner.Text = " You lose.";
+                lblWinner.Text = "You lose.";
             }
 
         }

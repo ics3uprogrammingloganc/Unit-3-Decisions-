@@ -54,7 +54,6 @@
             this.grbUser.TabIndex = 0;
             this.grbUser.TabStop = false;
             this.grbUser.Text = "Your choice";
-            this.grbUser.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // radUserScissors
             // 
@@ -103,7 +102,6 @@
             this.grbComputer.TabIndex = 1;
             this.grbComputer.TabStop = false;
             this.grbComputer.Text = "Computer\'s choice";
-            this.grbComputer.Enter += new System.EventHandler(this.grbComputer_Enter);
             // 
             // radCompScissors
             // 
