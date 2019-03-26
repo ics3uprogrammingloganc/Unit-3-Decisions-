@@ -45,6 +45,7 @@ namespace ChocolateBoxesLoganC
                 }
                 else if (boxesSold < 0)
                 {
+                    // Let user know that their number is out of range
                     throw new ArgumentOutOfRangeException();
                 }
                 else
