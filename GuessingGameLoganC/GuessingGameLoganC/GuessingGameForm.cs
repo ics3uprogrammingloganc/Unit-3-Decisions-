@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+* Created by: Logan C  
+* Created on: March 28, 2019
+* Created for: ICS3U Programming
+* Daily Assignment – Day #16 - Number guessing game
+* This program lets people guess a number. It lets you know if you got it correct or not.
+*/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,8 +15,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-
 namespace GuessingGameLoganC
 {
     public partial class frmGuessingGame : Form
